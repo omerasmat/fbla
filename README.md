@@ -21,7 +21,7 @@ This command creates the generated files that parse each Record from Firestore i
 ### Getting started continued:
 
 Instructions
-(for any judges or testers, please use the following link in your browser (insert link)
+(for any judges or testers, please use the following link in your browser (https://app.flutterflow.io/run/VLlelBXVd7HxNca3aS4O)
 
 Flutterflow will launch a virtual machine and the app will be compiled and streamed into your browser. Our backend system uses firebase so our app will only function correctly this way due to the configurations we are using to build our app for multiple platforms on flutter. 
 
