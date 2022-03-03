@@ -4,7 +4,7 @@ A new Flutter project.
 https://app.flutterflow.io/run/VLlelBXVd7HxNca3aS4O
 
 $ flutter pub get
-$f lutter packages pub run build_runner build --delete-conflicting-outputs
+$ flutter packages pub run build_runner build --delete-conflicting-outputs
 
 ## Getting Started
 
