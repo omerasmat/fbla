@@ -10,7 +10,6 @@ import 'flutter_flow/internationalization.dart';
 import 'package:fbla_v3/splash_screen/splash_screen_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'my_tasks/my_tasks_widget.dart';
 import 'completed_tasks/completed_tasks_widget.dart';
 import 'my_profile/my_profile_widget.dart';
@@ -122,92 +121,51 @@ class _NavBarPageState extends State<NavBarPage> {
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
       body: tabs[_currentPage],
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
         backgroundColor: FlutterFlowTheme.of(context).primaryBlack,
-        selectedItemColor: Color(0x00000000),
+        selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
         unselectedItemColor: FlutterFlowTheme.of(context).tertiaryColor,
-        selectedBackgroundColor: Color(0x00000000),
-        borderRadius: 8,
-        itemBorderRadius: 8,
-        margin: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-        width: double.infinity,
-        elevation: 0,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 0 ? Icons.playlist_add : Icons.playlist_add,
-                  color: currentIndex == 0
-                      ? Color(0x00000000)
-                      : FlutterFlowTheme.of(context).tertiaryColor,
-                  size: 32,
-                ),
-                Text(
-                  'My Tasks',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 0
-                        ? Color(0x00000000)
-                        : FlutterFlowTheme.of(context).tertiaryColor,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.playlist_add,
+              size: 32,
             ),
+            activeIcon: Icon(
+              Icons.playlist_add,
+              size: 32,
+            ),
+            label: 'My Tasks',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 1 ? Icons.alarm_on : Icons.alarm_on,
-                  color: currentIndex == 1
-                      ? Color(0x00000000)
-                      : FlutterFlowTheme.of(context).tertiaryColor,
-                  size: 32,
-                ),
-                Text(
-                  'Completed',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? Color(0x00000000)
-                        : FlutterFlowTheme.of(context).tertiaryColor,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.alarm_on,
+              size: 32,
             ),
+            activeIcon: Icon(
+              Icons.alarm_on,
+              size: 32,
+            ),
+            label: 'Completed',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 2 ? Icons.person_sharp : Icons.person_outline,
-                  color: currentIndex == 2
-                      ? Color(0x00000000)
-                      : FlutterFlowTheme.of(context).tertiaryColor,
-                  size: 32,
-                ),
-                Text(
-                  'Home',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 2
-                        ? Color(0x00000000)
-                        : FlutterFlowTheme.of(context).tertiaryColor,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outline,
+              size: 32,
             ),
+            activeIcon: Icon(
+              Icons.person_sharp,
+              size: 32,
+            ),
+            label: 'Home',
+            tooltip: '',
           )
         ],
       ),

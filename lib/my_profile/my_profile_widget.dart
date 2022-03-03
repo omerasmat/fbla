@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../calender_test/calender_test_widget.dart';
 import '../change_password/change_password_widget.dart';
 import '../edit_profile/edit_profile_widget.dart';
 import '../extracurricular/extracurricular_widget.dart';
@@ -383,9 +384,21 @@ class _MyProfileWidgetState extends State<MyProfileWidget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16, 8, 0, 16),
-                                child: Text(
-                                  '    Change Password',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            CalenderTestWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    '    School Calender ',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText1,
+                                  ),
                                 ),
                               ),
                             ),
