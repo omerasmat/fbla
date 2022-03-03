@@ -3,6 +3,9 @@
 A new Flutter project.
 https://app.flutterflow.io/run/VLlelBXVd7HxNca3aS4O
 
+$ flutter pub get
+$f lutter packages pub run build_runner build --delete-conflicting-outputs
+
 ## Getting Started
 
 FlutterFlow projects are built to run on the Flutter _stable_ release. To ensure the project runs smoothly. please run THIS LINK: https://app.flutterflow.io/run/VLlelBXVd7HxNca3aS4O
