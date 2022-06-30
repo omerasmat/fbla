@@ -45,11 +45,4 @@ The send email page is also located in the home page menu. However you must note
 If you were to download this app onto a mobile device, you will be able to login with your account and you will be able to see all of your information, like your schedule.
 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-
-For help getting started with Flutter, 
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
